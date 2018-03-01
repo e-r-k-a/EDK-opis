@@ -1,0 +1,19 @@
+
+
+Aplikacja wspomagajaca przygotowanie opisu trasy EDK
+
+Funkcje:
+1- dyktafon z zapisywaniem lokalizacji. Aby bylo wiadomo gdzie komunikat zostal nagrany
+2- nagrywanie sladu GPS
+3- zdjecia z geotagiem
+4- tekst z geotagiem
+
+Przegladanie na mapie wszystkich informacji (teksty nagrania zdjécia i filmy)
+Szablon do stworzenia opisu EDK
+ustalenie miejsc stacji
+Eksport sladu do pliku kml lub panelu EDK.
+Edycja sladu i jego obrobka
+
+obiekt punkt
+moze byc zdjeciem, tekstem, filmem 
+

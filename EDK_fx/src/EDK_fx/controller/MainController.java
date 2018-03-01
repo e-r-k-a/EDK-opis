@@ -34,7 +34,6 @@ public class MainController implements Initializable {
     	        public void handle(ActionEvent event) {
     	            System.out.println("Wygenerowano zdarzenie " + event.getEventType());
     	            mainTextArea.setText("dodajemy Commenta\n");
-    	            p
     	            mainTextArea.setText(mainTextArea.getText() + "dodany\n");
     	            
     	        }
