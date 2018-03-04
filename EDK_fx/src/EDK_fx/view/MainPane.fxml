@@ -36,7 +36,7 @@
    <right>
       <VBox prefHeight="415.0" prefWidth="123.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="btnCommentPoint" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="44.0" text="Dodaj komentarz" />
+            <Button fx:id="btnCommentPoint" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="44.0" text="Dodaj komntarz" />
             <Button fx:id="btnAudioPoint" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="44.0" text="Dodaj nagranie" />
             <Button fx:id="btnPicturePoint" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="44.0" prefWidth="82.0" text="Dodaj zdjęcie" />
          </children>

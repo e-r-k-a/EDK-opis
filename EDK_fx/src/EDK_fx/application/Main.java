@@ -9,9 +9,11 @@ import javafx.scene.layout.BorderPane;
 
 import model.*;
 
+
 public class Main extends Application {
-	final String VERSION = "1.0";
-	public PointManager pm  = new PointManager();
+	public final String VERSION = "1.0";
+	public PointManager pm  = new PointManager(); //utworzenie managera punktow
+	
 	
 	@Override
 	public void start(Stage stage) throws Exception {
@@ -21,7 +23,7 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.setTitle("EDK - wersja " + VERSION);
         stage.show();
-        //utworzenie managera punktow
+       
       
         
 	}
@@ -29,4 +31,5 @@ public class Main extends Application {
 	public static void main(String[] args) {
 		launch(args);
 	}
+	
 }

@@ -11,11 +11,14 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.event.*;
 import model.*;
-import EDK_fx.application;
+
 
 public class MainController implements Initializable {
 
-    @FXML
+	PointManager pm  = new PointManager(); //utworzenie managera punktow
+	
+    
+	@FXML
     private Button btnCommentPoint;
 
     @FXML
@@ -34,14 +37,17 @@ public class MainController implements Initializable {
     	        public void handle(ActionEvent event) {
     	            System.out.println("Wygenerowano zdarzenie " + event.getEventType());
     	            mainTextArea.setText("dodajemy Commenta\n");
-    	            mainTextArea.setText(mainTextArea.getText() + "dodany\n");
-    	            
+    	            CommentPoint commentPoint = new CommentPoint(1.2, 2.3, "nazwa1", "opis1", "koment1");
+    	            pm.add(commentPoint);
+    	            mainTextArea.setText(mainTextArea.getText() + pm.toString() +"\n");    	            
     	        }
     	    });
     	 btnAudioPoint.setOnAction(new EventHandler<ActionEvent>() {
     	        @Override
     	        public void handle(ActionEvent event) {
     	            System.out.println("Wygenerowano zdarzenie " + event.getEventType());
+    	       //     AudioPoint audioPoint()
+    	            
     	            mainTextArea.setText("klawisz 2");
     	        }
     	    });
