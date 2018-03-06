@@ -2,26 +2,26 @@ package Tests;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.Before;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.BeforeEach;
-
+import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.time.*;
-import java.time.temporal.ChronoUnit;
-import java.time.format.*;
 
-import model.Point;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-public class pointTest {
+import model.AudioPoint;
+import java.io.File;
 
-	private Point p;
+class AudioPointTest {
+
+	private AudioPoint p;
 	private final int MAXDURATIONNANO = 50000000; // 50ms na czas miêdzy utworzeniem obiektu a zrobieniem testu
 
 	@BeforeEach
 	public void setUp() {
-		p = new Point(19.56, 38.67, "nazwa1", "opis1");
+		p = new AudioPoint(19.56, 38.67, "nazwa1", "opis1", "TestAudioPoint");
+		File file = new File("TestAudioPoint");
+		assertTrue(file.exists());
 	}
 
 	@Test
@@ -31,18 +31,14 @@ public class pointTest {
 	}
 
 	@Test
-	public void test2() {// testy konstruktora
-
-	
-
+	public void test2() {
 		assertEquals(19.56, p.getxGpsCoord());
 		assertEquals(38.67, p.getyGpsCoord());
 		assertEquals("nazwa1", p.getName());
 		assertEquals("opis1", p.getDescription());
+		assertEquals("TestAudioPoint", p.getFileName());
 
 		Duration duration = Duration.between(p.getLocalTime(), LocalTime.now());
 		assertTrue(duration.getNano() < MAXDURATIONNANO);
-
 	}
-
 }
