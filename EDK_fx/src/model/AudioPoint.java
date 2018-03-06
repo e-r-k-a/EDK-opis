@@ -40,9 +40,7 @@ public class AudioPoint extends Point {
         recorder.start();
  		
 	}
-	
-	
-	
+		
 	public String getFileName() {
 		return fileName;
 	}
@@ -50,8 +48,6 @@ public class AudioPoint extends Point {
 	public void setFileName(String fileName) {
 		this.fileName = fileName;
 	}
-
-
 
 	@Override
 	public String toString() {
