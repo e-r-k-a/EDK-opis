@@ -1,58 +1,49 @@
 
 package EDK_fx.controller;
 
-
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import java.net.URL;
+import java.util.MissingFormatArgumentException;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.event.*;
 import model.*;
+import javafx.stage.Stage;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.fxml.FXMLLoader;
 
+public class MainController {
 
-public class MainController implements Initializable {
-
-	PointManager pm  = new PointManager(); //utworzenie managera punktow
 	
-    
 	@FXML
-    private Button btnCommentPoint;
+	private MainPaneController mainPaneController;
+	
+	@FXML
+	private AddCommentPointController addCommentPointController;
+	
 
-    @FXML
-    private Button btnAudioPoint;
+	@FXML
+	public void initialize() {
+		System.out.println("MainController.initialize()");
+		mainPaneController.init(this);
+		addCommentPointController.init(this);
+		
+		System.out.println(mainPaneController);
+		System.out.println(addCommentPointController);
+	}
 
-    @FXML
-    private Button btnPicturePoint;
 
-    @FXML
-    private TextArea mainTextArea;
+	public void setMainText(String s) {
+		mainPaneController.mainTextArea.setText(s);
+		return;
+		
+	}
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-    	 btnCommentPoint.setOnAction(new EventHandler<ActionEvent>() {
-    	        @Override
-    	        public void handle(ActionEvent event) {
-    	            System.out.println("Wygenerowano zdarzenie " + event.getEventType());
-    	            mainTextArea.setText("dodajemy Commenta\n");
-    	            CommentPoint commentPoint = new CommentPoint(1.2, 2.3, "nazwa1", "opis1", "koment1");
-    	            pm.add(commentPoint);
-    	            mainTextArea.setText(mainTextArea.getText() + pm.toString() +"\n");    	            
-    	        }
-    	    });
-    	 btnAudioPoint.setOnAction(new EventHandler<ActionEvent>() {
-    	        @Override
-    	        public void handle(ActionEvent event) {
-    	            System.out.println("Wygenerowano zdarzenie " + event.getEventType());
-    	       //     AudioPoint audioPoint()
-    	            
-    	            mainTextArea.setText("klawisz 2");
-    	        }
-    	    });
-    }
-    
-  
-    
 }
