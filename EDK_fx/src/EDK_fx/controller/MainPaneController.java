@@ -24,23 +24,23 @@ public class MainPaneController implements Initializable {
 	private MainController mainController;
 	
 
-	@FXML
-	private Button btnCommentPoint;
-	@FXML
-	private Button btnAudioPoint;
-	@FXML
-	private Button btnPicturePoint;
-	@FXML
-	private Button btnShowManager;
-	@FXML
-	private Button btnClearTextArea;
-	@FXML
-	public TextArea mainTextArea;
+//	@FXML
+//	private Button btnCommentPoint;
+//	@FXML
+//	private Button btnAudioPoint;
+//	@FXML
+//	private Button btnPicturePoint;
+//	@FXML
+//	private Button btnShowManager;
+//	@FXML
+//	private Button btnClearTextArea;
+//	@FXML
+//	public TextArea mainTextArea;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		System.out.println("MainPaneController.inintialize()");
-		btnCommentPoint.setOnAction(new EventHandler<ActionEvent>() {
+	/*	btnCommentPoint.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
 				System.out.println("Wygenerowano zdarzenie " + event.getEventType());
@@ -103,12 +103,12 @@ public class MainPaneController implements Initializable {
 		// stage.setScene(scene);
 		// stage.setTitle("Dodawanie punktu ");
 		// stage.show();
-
+*/
 	}
 
-	public void init(MainController main) {
-		mainController = main;
+//	public void init(MainController main) {
+	//	mainController = main;
 		
-	}
+//	}
 
 }

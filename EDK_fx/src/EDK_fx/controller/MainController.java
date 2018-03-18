@@ -32,8 +32,8 @@ public class MainController {
 	@FXML
 	public void initialize() {
 		System.out.println("MainController.initialize()");
-		mainPaneController.init(this);
-		addCommentPointController.init(this);
+	//	mainPaneController.init(this);
+	//	addCommentPointController.init(this);
 		
 		System.out.println(mainPaneController);
 		System.out.println(addCommentPointController);
@@ -41,7 +41,7 @@ public class MainController {
 
 
 	public void setMainText(String s) {
-		mainPaneController.mainTextArea.setText(s);
+//		mainPaneController.mainTextArea.setText(s);
 		return;
 		
 	}
